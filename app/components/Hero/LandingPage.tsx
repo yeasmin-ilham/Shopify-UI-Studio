@@ -120,19 +120,6 @@ const RulerSVG = ({ className = "" }: { className?: string }) => (
 
 // ─── Ticker Component ────────────────────────────────────────────────────────
 
-const Ticker = () => {
-  const text = "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL";
-  const items = Array(8).fill(text);
-  return (
-    <div className="border-t border-black overflow-hidden py-3 bg-white">
-      <div className="flex whitespace-nowrap animate-ticker">
-        {items.map((t, i) => (
-          <span key={i} className="text-[11px] tracking-[0.2em] font-medium mr-16">{t}</span>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // ─── Main Page ───────────────────────────────────────────────────────────────
 
@@ -150,9 +137,6 @@ export default function LandingPage() {
         <button  className="bg-secondary hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer text-gray-900 px-5 py-2.5 text-xs uppercase flex items-center gap-3">
           Choose Gift <span className="text-base">→</span>
         </button>
-
-
-
       </nav>
 
       {/* ── Hero ── */}
@@ -239,8 +223,12 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* ── Ticker ── */}
-      <Ticker />
+            {/* ── Footer ── */}
+             <footer className="flex items-center justify-center px-8 py-2 bg-gray-100 relative z-30 backdrop-blur-2xl">
+        <span className="text-[13px] text-gray-800 tracking-tight hidden md:block">
+SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</span>
+      </footer>
+
     </div>
   );
 }

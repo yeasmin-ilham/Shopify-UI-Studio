@@ -79,7 +79,7 @@ export default function ShoppableGallery() {
       onClick={() => setActivePin(null)}
     >
       {/* Heading */}
-      <h2 className="text-3xl font-serif font-normal text-gray-900 mb-8 tracking-tight">
+      <h2 className="text-4xl font-serif text-gray-700 mb-8">
         Tisso vison in the wild
       </h2>
 
