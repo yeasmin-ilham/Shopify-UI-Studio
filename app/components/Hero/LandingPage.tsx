@@ -128,7 +128,7 @@ export default function LandingPage() {
   useEffect(() => { setMounted(true); }, []);
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-white font-sans overflow-hidden">
   
       {/* ── Navbar ── */}
              <nav className="flex items-center justify-between px-8 py-2 bg-gray-100 relative z-30 backdrop-blur-2xl">
