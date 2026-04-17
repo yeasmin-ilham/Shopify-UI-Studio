@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -161,25 +162,25 @@ export default function LandingPage() {
         <div className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-700 ${mounted ? "opacity-100" : "opacity-0"}`}>
 
           {/* Top row */}
-          <div className="absolute top-[-10px] left-[5%] w-60 float-slow" style={{"--r":"−12deg"} as React.CSSProperties}>
+          <div className="absolute  left-[5%] w-60 float-slow" style={{"--r":"−12deg"} as React.CSSProperties}>
             <SunglassesSVG className="text-black/80" />
           </div>
-          <div className="absolute top-[10px] left-[14%] w-100 float-mid" style={{"--r":"3deg"} as React.CSSProperties}>
+          <div className="absolute  left-[14%] w-100 float-mid" style={{"--r":"3deg"} as React.CSSProperties}>
             <CameraSVG className="text-black/75" />
           </div>
-          <div className="absolute top-[-20px] left-[42%] w-70 float-slow" style={{"--r":"0deg"} as React.CSSProperties}>
+          <div className="absolute  left-[42%] w-70 float-slow" style={{"--r":"0deg"} as React.CSSProperties}>
             <MicroscopeSVG className="text-black/60" />
           </div>
-          <div className="absolute top-[5px] left-[56%] w-40 float-mid" style={{"--r":"−5deg"} as React.CSSProperties}>
+          <div className="absolute  left-[56%] w-40 float-mid" style={{"--r":"−5deg"} as React.CSSProperties}>
             <NotebookSVG className="text-black/70" />
           </div>
-          <div className="absolute top-[15px] left-[68%] w-25 float-fast" style={{"--r":"−8deg"} as React.CSSProperties}>
+          <div className="absolute  left-[68%] w-25 float-fast" style={{"--r":"−8deg"} as React.CSSProperties}>
             <PencilSVG className="text-black/65" />
           </div>
-          <div className="absolute top-[-5px] right-[8%] w-50 float-slow" style={{"--r":"8deg"} as React.CSSProperties}>
+          <div className="absolute right-[8%] w-50 float-slow" style={{"--r":"8deg"} as React.CSSProperties}>
             <LensSVG className="text-black/55" />
           </div>
-          <div className="absolute top-[20px] right-[2%] w-50 float-mid" style={{"--r":"−3deg"} as React.CSSProperties}>
+          <div className="absolute  right-[2%] w-50 float-mid" style={{"--r":"−3deg"} as React.CSSProperties}>
             <CameraSVG className="text-black/60" />
           </div>
 
