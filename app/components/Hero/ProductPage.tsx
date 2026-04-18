@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Img1 from "@/app/assets/productImg/image 822.png"
-import Img2 from "@/app/assets/productImg/image 823.png"
-import Img3 from "@/app/assets/productImg/image 824.png"
-import Img4 from "@/app/assets/productImg/image 825.png"
-import Img5 from "@/app/assets/productImg/image 826.png"
-import Img6 from "@/app/assets/productImg/image 827.png"
+import Img1 from "@/app/assets/productImg/1.jpg"
+import Img2 from "@/app/assets/productImg/2.jpg"
+import Img3 from "@/app/assets/productImg/3.jpg"
+import Img4 from "@/app/assets/productImg/4.jpg"
+import Img5 from "@/app/assets/productImg/5.jpg"
+import Img6 from "@/app/assets/productImg/6.jpg"
 import Image from "next/image";
 
 
@@ -15,37 +15,37 @@ const galleryImages = [
     id: 1,
     src: Img1,
     alt: "Black leather handbag with crossbody strap",
-    hotspots: [{ x: 52, y: 72, label: "Orange Wide Leg", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img1  }],
+    hotspots: [{ label: "Orange Wide Leg", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img1  }],
   },
   {
     id: 2,
     src: Img2,
     alt: "Man in blue floral blazer with bow tie",
-    hotspots: [{ x: 60, y: 68, label: "Tailored Jacket", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img2 }],
+    hotspots: [{  label: "Tailored Jacket", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img2 }],
   },
   {
     id: 3,
     src: Img3,
     alt: "Accordion Pleated Dress",
-    hotspots: [{ x: 68, y: 38, label: "Accordion Pleated Dress", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief. ", img: Img3 }],
+    hotspots: [{ label: "Accordion Pleated Dress", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief. ", img: Img3 }],
   },
   {
     id: 4,
     src: Img4,
     alt: "Green Trench Coat",
-    hotspots: [{ x: 45, y: 52, label: "Green Trench Coat", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." ,img: Img4  }],
+    hotspots: [{  label: "Green Trench Coat", price: "980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." ,img: Img4  }],
   },
   {
     id: 5,
     src:Img5,
     alt: "Tennis Blue T-Shirt",
-    hotspots: [{ x: 50, y: 55, label:"Tennis Blue T-Shirt", price:"980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img5 }],
+    hotspots: [{  label:"Tennis Blue T-Shirt", price:"980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief." , img: Img5 }],
   },
   {
     id: 6,
     src:Img6,
     alt: "Blonde woman in denim jacket with sunglasses",
-    hotspots: [{ x: 72, y: 62, label: "Long Sleeve Tennis Top", price:"980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.", img: Img6  }],
+    hotspots: [{  label: "Long Sleeve Tennis Top", price:"980,00€", description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.", img: Img6  }],
   },
 ];
 
@@ -79,7 +79,7 @@ export default function ShoppableGallery() {
       onClick={() => setActivePin(null)}
     >
       {/* Heading */}
-      <h2 className="text-4xl font-serif text-gray-700 mb-8">
+      <h2 className="text-4xl font-serif text-white mb-8">
         Tisso vison in the wild
       </h2>
 
@@ -106,26 +106,25 @@ export default function ShoppableGallery() {
               return (
                 <div
                   key={index}
-                  className="absolute"
-                  style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
+                  className="absolute left-[50%] top-[50%]"
                 >
                   {/* Tooltip */}
                               {isActive && (
                                 <div
-                                  className=" grid grid-cols-2 gap-2 absolute z-20 bottom-full mb-3 left-1/2 -translate-x-1/2
-                                    bg-white shadow-2xl rounded-sm px-3 py-3  min-w-[400px] drop-shadow-2xl
+                                  className=" grid grid-cols-2 gap-2 absolute z-20 bottom-full mb-3 -translate-x-1/2
+                                    bg-white shadow-2xl rounded-sm px-3 py-3  min-w-xs min-h-50 drop-shadow-2xl
                                     border border-gray-100 pointer-events-none">
             
                                   <div className="text-xs font-semibold text-gray-800 whitespace-nowrap">
                                     <Image
                                     src={hotspot.img}
-                                    className="w-40 h-40 object-cover"
+                                    className="w-50 h-50 object-cover"
                                     alt="image"/>
                                   </div>
-                                 <div className="gap-2 text-primary">
+                                 <div className="text-primary flex flex-col gap-3">
                                 <p className="text-gray-900 font-semibold font-sans">{hotspot.label}</p>
                                  <p className="font-semibold">{hotspot.price}</p>
-                                 <p className="text-gray-700">{hotspot.description}</p>
+                                 <p className="text-gray-600 text-sm">{hotspot.description}</p>
                                  </div>
                                  
                                 </div>
